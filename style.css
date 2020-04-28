@@ -1,4 +1,239 @@
 body{
-    color: royalblue;
-    background-color: red;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.upper-tag{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 50px;
+    background-color: royalblue;
+}
+.social-media-icons ,.text ,.donatation-buttons{
+    text-align: center;
+    margin-top:5px;
+    margin-right: 3%;
+    box-sizing: border-box;
+}
+div.social-media-icons ul, div.donatation-buttons ul{
+    display: flex;
+}
+div.social-media-icons ul li{
+    list-style: none;
+}
+div.social-media-icons ul a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+div.donatation-buttons ul li{
+    list-style: none;
+    padding: 3px;
+}
+div.donatation-buttons ul li button{
+    border: 1px solid green;
+    color: green;
+    font-size: 0.8em;
+    padding: 6px;
+}
+.text{
+    padding-top:5px;
+    color: white;
+}
+.sticky-header{
+    position: sticky;
+    top: 0px;
+}
+header{
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+}
+header .sylani-logo img{
+    height: 70px;
+    width: 200px;
+    padding: 10px;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.header-div{
+    display: flex;
+    align-items: center;
+}
+header nav ul li{
+    list-style: none;
+    position: relative;
+}
+header nav ul li ul{
+    position: absolute;
+    top:30px;
+    background-color: whitesmoke;
+    display: none;
+}
+header nav ul li ul li{
+    display: block;
+    width: 200px;
+    font-size: 0.8em;
+}
+header nav ul li ul li:hover{
+    border-radius: none;
+    background-color: royalblue;
+}
+header nav ul li:hover ul{
+    display: block;
+}
+header nav ul li a{
+    height: 30px;
+    line-height: 30px;
+    color: black;
+    padding: 0 15px;
+    text-decoration: none;
+}
+header nav ul li a.active,
+header nav ul li a:hover{
+    color: white;
+    background-color: royalblue;
+    border-radius: 25px;
+    display: block;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+.menu-toggle{
+    float: right;
+    line-height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.sec1{
+    width: 100%;
+}
+.sec2{
+    width: 100%;
+    background-color: whitesmoke;
+}
+.sec2 .tigger{
+    text-align: center;
+    border: 1px solid transparent;
+    background-color: royalblue;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+.sec2 h1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 50px;
+}
+.sec2 p{
+    text-align: justify;
+    margin: 0 100px;
+    line-height: 2.2em;
+    color: gray;
+    padding-bottom: 100px;
+}
+.sec3{
+    width: 100%;
+}
+.sec3 img{
+    width: 100%;
+    height: auto;
+}
+.sec4{
+    width: 100%;
+}
+.sec4 h1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold ;
+    margin: 50px;
+}
+.sec4-doing-div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.inner-div{
+    width: 330px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 0 15px;
+    } 
+    .menu-toggle{
+        display: block;
+    }  
+    header nav{
+        /* display: none; */
+        position: absolute;
+        width: 100%;
+        height: calc(100vh-50px);
+        top: 70px;
+        left: -100%;
+        background-color: whitesmoke;
+        transition: 0.5s;
+    }
+    header nav.active{
+        left: 0;
+    }
+    header nav ul{
+        display: block;
+        text-align: center;
+    }
+    header nav ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(0.1,0.1,0.1,0.2);
+    }
+    .upper-tag{
+        height: auto;
+    }
+    header nav ul li.active ul{
+        position: relative;
+        top: 0px;
+        background-color: whitesmoke;
+    }
+    header nav ul li ul li{
+        width: 100%;
+        border-radius: none;
+    }
+    .sec1 img{
+        width: 350px;
+        height: auto;
+    }
+    .sec2 p{
+        margin: 20px;
+    }
+    .sec4 h1{
+        font-size: 1.4em;
+    }
+    .sec4-doing-div{
+        max-width: 300px;
+    }
+    .inner-div{
+        margin: 10px;
+    }
+    .sec4-doing-div{
+        justify-content: center;
+    }
 }
